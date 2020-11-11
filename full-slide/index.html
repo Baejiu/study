@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>full-slider</title>
+  <meta name="description" content="JavaScript">
+  <meta name="author" content="Jiu">
+  <script
+      src="https://kit.fontawesome.com/5fdf801efc.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+</head>
+<body>
+  <!-- main slider -->
+  <section class="main">
+    <!-- slider -->
+    <div class="slider-wrap">
+    <ul class="slider">
+        <li class="slider__item slider--fade">
+          <div class="slider__img slider__img-1"></div>
+          <div class="slider__text">
+            <h2>슬라이드1</h2>
+            <p>슬라이드1 설명</p>
+          </div>
+        </li>
+        <li class="slider__item slider--fade">
+          <div class="slider__img slider__img-2"></div>
+          <div class="slider__text">
+            <h2>슬라이드2</h2>
+            <p>슬라이드2 설명</p>
+          </div>
+        </li>
+        <li class="slider__item slider--fade">
+          <div class="slider__img slider__img-3"></div>
+          <div class="slider__text">
+            <h2>슬라이드3</h2>
+            <p>슬라이드3 설명</p>
+          </div>
+        </li>
+      </ul>
+      <a class="slider__prev" onclick="plusSlides(-1)"><i class="fas fa-chevron-left"></i></a>
+      <a class="slider__next" onclick="plusSlides(1)"><i class="fas fa-chevron-right"></i></a>
+      <div class="slider__dots">
+        <span class="slider__dot" onclick="currentSlide(1)"></span>
+        <span class="slider__dot" onclick="currentSlide(2)"></span>
+        <span class="slider__dot" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

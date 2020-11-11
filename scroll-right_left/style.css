@@ -1,0 +1,52 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+/* 
+html.prevent-history,
+html.prevent-history body {
+  overscroll-behavior: contain;
+} */
+
+.scroll-wrapper {
+  overflow: hidden;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+ul {
+  display: block;
+  white-space: nowrap;
+  height: 300px;
+  overflow: visible;
+  padding: 0;
+  font-size: 0;
+  transform: translateX(0px);
+  transition: all 0.3s;
+}
+
+li {
+  box-sizing: border-box;
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  border: 1px solid;
+  margin-right: 5px;
+}
+
+li:nth-child(4n) {
+  background: #b4b4b4;
+}
+
+li:nth-child(4n + 1) {
+  background: #2d2d2d;
+}
+
+li:nth-child(4n + 2) {
+  background: #857d68;
+}
+
+li:nth-child(4n + 3) {
+  background: #f5f5f5;
+}
