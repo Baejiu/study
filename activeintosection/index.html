@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <style>
+        nav {
+            position:fixed;
+            top:50%; left:5%;
+            transform: translateY(-50%);
+        }
+        nav li:hover {
+            color:red;
+            cursor: pointer;
+        }
+        .active {
+            color:blue;
+        }
+        section {
+            width:100vw;
+            height:100vh;
+        }
+        #section1 {
+            background-color: skyblue;
+        }
+        #section2 {
+            background-color:beige;
+        }
+        #section3 {
+            background-color: palegoldenrod;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="nav__list">
+            <li data-link="section1">section1</li>
+            <li data-link="section2">section2</li>
+            <li data-link="section3">section3</li>
+        </ul>
+    </nav>
+    <div class="main">
+        <section id="section1"></section>
+        <section id="section2"></section>
+        <section id="section3"></section>
+    </div>
+</body>
+</html>
