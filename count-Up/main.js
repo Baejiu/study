@@ -26,7 +26,16 @@ numberCounter.prototype.counter = function () {
     clearTimeout(this.timer);
   }
 };
+const btn = document.querySelector(".d");
+const btn2 = document.querySelector(".c");
+btn.addEventListener("click", () => {
+  new numberCounter('counter3', 99999);
+  new numberCounter('counter2', 1123456);
+  new numberCounter('counter1', 15);
+})
 
-new numberCounter('counter3', 99999);
-new numberCounter('counter2', 1123456);
-new numberCounter('counter1', 15);
+btn2.addEventListener("click", () => {
+  new numberCounter('counter3', 4444);
+  new numberCounter('counter2', 343434);
+  new numberCounter('counter1', 2222);
+})

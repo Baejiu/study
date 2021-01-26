@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  * {
+      margin: 0;
+      padding:0; 
+      box-sizing: border-box;
+    }
+    .progress-container {
+      position: fixed;
+      top:0;
+      left:0;
+      right:0;
+      height: 8px;
+      transition: all .3s ease;
+      outline: 1px solid red;
+    }
+    .progress-container:hover {
+      height: 16px;
+    }
+    .progress-bar {
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      height: 100%;
+      background: #4caf50;
+      width: 0%;
+      transition: all .3s ease;
+      z-index: -1;
+    }
+    .progress__menu {
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;height: 100%;
+      display: flex;
+    }
+    .progress__menu-item {
+      flex-grow: 1;
+      height: 100%;
+      list-style:none;
+      border: 1px solid blue;
+      cursor: pointer;
+      transition: all .3s ease;
+    }
+    .progress__menu-item:hover {
+      background-color: rgba(76,175,80,0.4);
+    }
+    .progress__menu-item span {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: all .3s ease;
+      position: absolute;
+      top: 8px;
+      right: 30px;
+    }
+    .progress__menu-item:hover span{
+      opacity:1;
+      transform: scale(1);
+    }
+    .section {
+      height: 800px;
+      outline: 1px solid blue;
+    }
+    #section2 {
+      height: 1200px;
+    }
+    #section4 {
+      height: 400px;
+    }
+    .footer {
+      height: 100vh;
+    }
+  </style>
+  <script src="./main.js" defer></script>
+</head>
+<body>
+  <nav class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+    <ul class="progress__menu">
+        <li class="progress__menu-item" data-link="#section1"><span>section1</span></li>
+        <li class="progress__menu-item" data-link="#section2"><span>section2</span></li>
+        <li class="progress__menu-item" data-link="#section3"><span>section3</span></li>
+        <li class="progress__menu-item" data-link="#section4"><span>section4</span></li>
+        <li class="progress__menu-item" data-link="#section5"><span>section5</span></li>
+    </ul>
+  </nav>
+  <div class="wrap">
+    <section class="section" id="section1">section1</section>
+    <section class="section" id="section2">section2</section>
+    <section class="section" id="section3">section3</section>
+    <section class="section" id="section4">section4</section>
+    <section class="section" id="section5">section5</section>
+  </div>
+  
+  <div class="footer"></div>
+</body>
+</html>
